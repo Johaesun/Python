@@ -1,0 +1,328 @@
+Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:01:18) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> "안뇽"*2
+'안뇽안뇽'
+>>> 
+>>> 
+=============================== RESTART: Shell ===============================
+>>> a = 10
+>>> b = 20
+>>> a+b
+30
+>>> 
+=============================== RESTART: Shell ===============================
+>>> import
+SyntaxError: invalid syntax
+>>> 
+=============================== RESTART: Shell ===============================
+>>> #restart - ctrl + f6
+>>> 
+=============================== RESTART: Shell ===============================
+>>> import types
+>>> dir(types)
+['BuiltinFunctionType', 'BuiltinMethodType', 'CodeType', 'CoroutineType', 'DynamicClassAttribute', 'FrameType', 'FunctionType', 'GeneratorType', 'GetSetDescriptorType', 'LambdaType', 'MappingProxyType', 'MemberDescriptorType', 'MethodType', 'ModuleType', 'SimpleNamespace', 'TracebackType', '_GeneratorWrapper', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_calculate_meta', '_collections_abc', '_functools', 'coroutine', 'new_class', 'prepare_class']
+>>> if a > 0 and/
+SyntaxError: invalid syntax
+>>> 
+=============================== RESTART: Shell ===============================
+>>> 
+>>> "py"+"thon
+SyntaxError: EOL while scanning string literal
+>>> "py"+"thon"
+'python'
+>>> a = 'python'
+>>> a[0]
+'p'
+>>> a = 'python'
+>>> a[0:3]
+'pyt'
+>>> a[2:4]
+'th'
+>>> var ="hello"
+>>> var[-3]
+'l'
+>>> 
+var[:]
+'hello'
+>>> 
+>>> x = "hello python world"
+>>> x[5:4]
+''
+>>> x[4:10]
+'o pyth'
+>>> x[-1:-9]
+''
+>>> x[-9:-1]
+'hon worl'
+>>> colors=['r','g','b']
+>>> colors
+['r', 'g', 'b']
+>>> print (colors)
+['r', 'g', 'b']
+>>> colors[1]
+'g'
+>>> type(colors)
+<class 'list'>
+>>> colors.append('gold')
+>>> colors
+['r', 'g', 'b', 'gold']
+>>> #append : 마지막에 추가
+>>> ]
+>>> colors.add['a']
+Traceback (most recent call last):
+  File "<pyshell#36>", line 1, in <module>
+    colors.add['a']
+AttributeError: 'list' object has no attribute 'add'
+>>> colors.insert(1,"aa")
+>>> colors
+['r', 'aa', 'g', 'b', 'gold']
+>>> colors.index('r')
+0
+>>> colors.index('god')
+Traceback (most recent call last):
+  File "<pyshell#40>", line 1, in <module>
+    colors.index('god')
+ValueError: 'god' is not in list
+>>> colors.index('gold')
+4
+>>> colors.append('red')
+>>> print(colors)
+['r', 'aa', 'g', 'b', 'gold', 'red']
+>>> colors+=['r']
+>>> colors
+['r', 'aa', 'g', 'b', 'gold', 'red', 'r']
+>>> colors.index('r')
+0
+>>> #마지막 값만 리턴
+>>> colors.index('r',1)
+6
+>>> colors.delete('b')
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    colors.delete('b')
+AttributeError: 'list' object has no attribute 'delete'
+>>> colors = 'r'.pop
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    colors = 'r'.pop
+AttributeError: 'str' object has no attribute 'pop'
+>>> colors+="red"
+>>> colors
+['r', 'aa', 'g', 'b', 'gold', 'red', 'r', 'r', 'e', 'd']
+>>> #따로따로 구분
+>>> colors.count('r')
+3
+>>> #append/insert/count/pop
+>>> colors.pop()
+'d'
+>>> colors
+['r', 'aa', 'g', 'b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors.pop[-2:-1]
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    colors.pop[-2:-1]
+TypeError: 'builtin_function_or_method' object is not subscriptable
+>>> colors.pop(2)
+'g'
+>>> colors
+['r', 'aa', 'b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors.pop(0:2)
+SyntaxError: invalid syntax
+>>> colors.pop(0,2)
+Traceback (most recent call last):
+  File "<pyshell#62>", line 1, in <module>
+    colors.pop(0,2)
+TypeError: pop() takes at most 1 argument (2 given)
+>>> colors.pop(0~2)
+SyntaxError: invalid syntax
+>>> colors.pop(colors[-2:-1])
+Traceback (most recent call last):
+  File "<pyshell#64>", line 1, in <module>
+    colors.pop(colors[-2:-1])
+TypeError: 'list' object cannot be interpreted as an integer
+>>> colors[1:2].pop()
+'aa'
+>>> colors
+['r', 'aa', 'b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors[1:2].pop
+<built-in method pop of list object at 0x03339300>
+>>> colors
+['r', 'aa', 'b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors[0:2] = []
+>>> colors
+['b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors[] = []
+SyntaxError: invalid syntax
+>>> cp;prs
+Traceback (most recent call last):
+  File "<pyshell#72>", line 1, in <module>
+    cp;prs
+NameError: name 'cp' is not defined
+>>> colors
+['b', 'gold', 'red', 'r', 'r', 'e']
+>>> #2개 이상 지우기  : 변수[n:n] = []
+>>> colors.remove()
+Traceback (most recent call last):
+  File "<pyshell#75>", line 1, in <module>
+    colors.remove()
+TypeError: remove() takes exactly one argument (0 given)
+>>> color.remove('red')
+Traceback (most recent call last):
+  File "<pyshell#76>", line 1, in <module>
+    color.remove('red')
+NameError: name 'color' is not defined
+>>> colors
+['b', 'gold', 'red', 'r', 'r', 'e']
+>>> colors.remove('red')
+>>> colors
+['b', 'gold', 'r', 'r', 'e']
+>>> colors
+['b', 'gold', 'r', 'r', 'e']
+>>> #정렬
+>>> colors
+['b', 'gold', 'r', 'r', 'e']
+>>> colors.sort()
+>>> colors
+['b', 'e', 'gold', 'r', 'r']
+>>> colors.reverse()
+>>> colors
+['r', 'r', 'gold', 'e', 'b']
+>>> colors.append('hello')
+>>> colors
+['r', 'r', 'gold', 'e', 'b', 'hello']
+>>> colors.set()
+Traceback (most recent call last):
+  File "<pyshell#89>", line 1, in <module>
+    colors.set()
+AttributeError: 'list' object has no attribute 'set'
+>>> colors
+['r', 'r', 'gold', 'e', 'b', 'hello']
+>>> a={1,2,3}
+>>> b={3,4,5}
+>>> a&&b
+SyntaxError: invalid syntax
+>>> a&b
+{3}
+>>> a
+{1, 2, 3}
+>>> b
+{3, 4, 5}
+>>> a&b
+{3}
+>>> a-b
+{1, 2}
+>>> type(a)
+<class 'set'>
+>>> type(b)
+<class 'set'>
+>>> a.union(b)
+{1, 2, 3, 4, 5}
+>>> #합집함 : union
+>>> #교집합
+>>> a.intersection(b)
+{3}
+>>> #차집합
+>>> a-b
+{1, 2}
+>>> #합집합
+>>> a|b
+{1, 2, 3, 4, 5}
+>>> #교집합
+>>> a&b
+{3}
+>>> #@*****튜플*********
+>>> t=(1,2,3)
+>>> tpye(t)
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    tpye(t)
+NameError: name 'tpye' is not defined
+>>> type(t)
+<class 'tuple'>
+>>> q = (1,2,3,4,5,6,7,8,9)
+>>> type(q)
+<class 'tuple'>
+>>> q
+(1, 2, 3, 4, 5, 6, 7, 8, 9)
+>>> a,b=1,2
+>>> a
+1
+b
+>>> 
+>>> a
+1
+>>> b
+2
+>>> ab
+Traceback (most recent call last):
+  File "<pyshell#123>", line 1, in <module>
+    ab
+NameError: name 'ab' is not defined
+>>> a,b
+(1, 2)
+>>> a&b
+0
+>>> a!b
+SyntaxError: invalid syntax
+>>> a,b
+(1, 2)
+>>> a.b
+Traceback (most recent call last):
+  File "<pyshell#128>", line 1, in <module>
+    a.b
+AttributeError: 'int' object has no attribute 'b'
+>>> a*b
+2
+>>> a,b=1,2
+>>> #함수
+>>> def name(a,b);
+SyntaxError: invalid syntax
+>>> def name(a,b):
+	return a+b , a*b
+
+>>> x,y = name(5,4)
+>>> #리턴이 하나이상일 경우 튜플 사용
+>>> x,y
+(9, 20)
+>>> print 'id:'%s , 'name':%s '%('tom','톰')
+SyntaxError: invalid syntax
+>>> print '(id:%s , name:%s)%('tom','톰'))
+SyntaxError: invalid syntax
+>>> print '(id:%s , name:%s%('tom','톰'))
+SyntaxError: invalid syntax
+>>> print ('id:%s , name:%s'%('tom','톰'))
+id:tom , name:톰
+>>>  a=
+ 
+SyntaxError: unexpected indent
+>>> a
+1
+>>> a = set(1,5,8,4)
+Traceback (most recent call last):
+  File "<pyshell#145>", line 1, in <module>
+    a = set(1,5,8,4)
+TypeError: set expected at most 1 arguments, got 4
+>>> a = set((1,5,2,6))
+>>> a
+{1, 2, 5, 6}
+>>> type(a)
+<class 'set'>
+>>> b=list(a)
+>>> a
+{1, 2, 5, 6}
+>>> 
+>>> type(a)
+<class 'set'>
+>>> type(b)
+<class 'list'>
+>>> c=tuple(b)
+>>> b
+[1, 2, 5, 6]
+>>> type(b)
+<class 'list'>
+>>> c = tuple(b)
+>>> c
+(1, 2, 5, 6)
+>>> type(c)
+<class 'tuple'>
+>>> 
